@@ -62,8 +62,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="footer-col">
               <h4>Ecosystem</h4>
-              <a href="https://makeworkflow.com" target="_blank" rel="noopener noreferrer">Make Work Flow™</a>
-              <a href="https://harvestpoint.sg" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>
+              <a href="https://www.makeworkflow.dev" target="_blank" rel="noopener noreferrer">Make Work Flow™</a>
+              <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <p className="footer-legal">
               FDE Singapore explores the Forward Deployed Engineering role and community. 
               Commercial consulting services are provided separately by{' '}
-              <a href="https://harvestpoint.sg" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>.
+              <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>.
             </p>
           </div>
         </div>

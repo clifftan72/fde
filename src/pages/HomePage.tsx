@@ -29,14 +29,14 @@ const ecosystem = [
     role: 'Methodology & Thinking',
     desc: 'The operational methodology behind workflow-first system design. Principles, patterns, and field notes.',
     current: false,
-    href: 'https://makeworkflow.com',
+    href: 'https://www.makeworkflow.dev',
   },
   {
     name: 'Harvest Point Consulting',
     role: 'Commercial Practice',
     desc: 'Where FDE methodology meets client engagements. Consulting and implementation for Singapore businesses.',
     current: false,
-    href: 'https://harvestpoint.sg',
+    href: 'https://www.harvestpointconsulting.com',
   },
 ]
 

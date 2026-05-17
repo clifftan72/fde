@@ -149,7 +149,7 @@ export default function WaitlistPage() {
               <p style={{ marginTop: '10px' }}>
                 FDE Singapore is a category and community initiative. It is not a consulting pitch.
                 Commercial work is handled separately by{' '}
-                <a href="https://harvestpoint.sg" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">
                   Harvest Point Consulting
                 </a>.
               </p>
