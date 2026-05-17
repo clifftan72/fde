@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { usePageTitle } from '../hooks/usePageTitle'
 import './WaitlistPage.css'
 
-type FormState = 'idle' | 'submitting' | 'success' | 'error'
+type FormState = 'idle' | 'submitting' | 'success' | 'redirected' | 'error'
 
 export default function WaitlistPage() {
+  usePageTitle('Join the FDE Singapore Waitlist | FDE Singapore')
   const [email, setEmail] = useState('')
   const [role, setRole] = useState('')
   const [formState, setFormState] = useState<FormState>('idle')
@@ -21,13 +23,13 @@ export default function WaitlistPage() {
       const endpoint = import.meta.env.VITE_WAITLIST_ENDPOINT
 
       if (!endpoint) {
-        // Graceful fallback: direct to a safe form provider if backend not configured
+        // No backend configured — open Tally in a new tab, do not show a false success
         window.open(
           `https://tally.so/r/fde-singapore?email=${encodeURIComponent(email)}`,
           '_blank',
           'noopener,noreferrer'
         )
-        setFormState('success')
+        setFormState('redirected')
         return
       }
 
@@ -73,6 +75,22 @@ export default function WaitlistPage() {
                   We will be in touch as the FDE Singapore community takes shape.
                   No spam — just relevant updates when there is something worth sharing.
                 </p>
+              </div>
+            ) : formState === 'redirected' ? (
+              <div className="waitlist-redirected" role="alert">
+                <div className="redirected-icon">↗</div>
+                <h2>You have been redirected.</h2>
+                <p>
+                  A sign-up form has opened in a new tab. Please complete it there to join the waitlist.
+                  If nothing opened, check your browser's pop-up settings.
+                </p>
+                <button
+                  className="btn btn-ghost"
+                  style={{ marginTop: '8px' }}
+                  onClick={() => setFormState('idle')}
+                >
+                  Try again
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="waitlist-form" noValidate>

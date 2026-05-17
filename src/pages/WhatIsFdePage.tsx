@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { usePageTitle } from '../hooks/usePageTitle'
 import './WhatIsFdePage.css'
 
 const comparisons = [
@@ -16,6 +17,7 @@ const principles = [
 ]
 
 export default function WhatIsFdePage() {
+  usePageTitle('What Is a Forward Deployed Engineer? | FDE Singapore')
   return (
     <>
       <section className="wif-hero">

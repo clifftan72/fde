@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { usePageTitle } from '../hooks/usePageTitle'
 import './HomePage.css'
 
 const whatFdesDo = [
@@ -41,6 +42,7 @@ const ecosystem = [
 ]
 
 export default function HomePage() {
+  usePageTitle('FDE Singapore | Forward Deployed Engineering for the AI Era')
   return (
     <>
       {/* ---- HERO ---- */}
