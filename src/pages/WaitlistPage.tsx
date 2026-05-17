@@ -1,18 +1,60 @@
-import { useEffect } from 'react'
+import { useState } from 'react'
 import { usePageTitle } from '../hooks/usePageTitle'
 import './WaitlistPage.css'
+
+type FormState = 'idle' | 'submitting' | 'success' | 'error'
+
+const roleOptions = [
+  { value: 'operator',    label: 'SME operator' },
+  { value: 'ai-builder',  label: 'AI builder' },
+  { value: 'consultant',  label: 'Consultant' },
+  { value: 'product',     label: 'Product manager' },
+  { value: 'analyst',     label: 'Business analyst' },
+  { value: 'automation',  label: 'Automation specialist' },
+  { value: 'founder',     label: 'Technical founder' },
+  { value: 'other',       label: 'Other' },
+]
 
 export default function WaitlistPage() {
   usePageTitle('Join the FDE Singapore Waitlist | FDE Singapore')
 
-  useEffect(() => {
-    // Load Tally embed script once
-    if (document.querySelector('script[src="https://tally.so/widgets/embed.js"]')) return
-    const script = document.createElement('script')
-    script.src = 'https://tally.so/widgets/embed.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
+  const [email, setEmail]       = useState('')
+  const [role, setRole]         = useState('')
+  const [formState, setFormState] = useState<FormState>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email.trim()) return
+
+    setFormState('submitting')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim(), role }),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.error ?? 'Submission failed')
+      }
+
+      setFormState('success')
+      setEmail('')
+      setRole('')
+    } catch (err: unknown) {
+      setFormState('error')
+      setErrorMsg(
+        err instanceof Error
+          ? err.message
+          : 'Something went wrong. Please try again.'
+      )
+    }
+  }
 
   return (
     <>
@@ -31,18 +73,73 @@ export default function WaitlistPage() {
       <section className="waitlist-form-section">
         <div className="container waitlist-grid">
 
-          {/* ---- Tally embed ---- */}
+          {/* ---- Form ---- */}
           <div className="waitlist-form-col">
-            <iframe
-              data-tally-src="https://tally.so/embed/1ANvlQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
-              width="100%"
-              height="500"
-              frameBorder={0}
-              marginHeight={0}
-              marginWidth={0}
-              title="Join the FDE Singapore Waitlist"
-            />
+            {formState === 'success' ? (
+              <div className="waitlist-success" role="alert">
+                <div className="success-icon">✓</div>
+                <h2>You are on the list.</h2>
+                <p>
+                  We will be in touch as the FDE Singapore community takes shape.
+                  No spam — just relevant updates when there is something worth sharing.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="waitlist-form" noValidate>
+                <div className="form-group">
+                  <label htmlFor="waitlist-email" className="form-label">
+                    Email address
+                  </label>
+                  <input
+                    id="waitlist-email"
+                    type="email"
+                    className="form-input"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    required
+                    disabled={formState === 'submitting'}
+                    autoComplete="email"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="waitlist-role" className="form-label">
+                    Your role or context{' '}
+                    <span className="form-optional">(optional)</span>
+                  </label>
+                  <select
+                    id="waitlist-role"
+                    className="form-input form-select"
+                    value={role}
+                    onChange={e => setRole(e.target.value)}
+                    disabled={formState === 'submitting'}
+                  >
+                    <option value="">Select one…</option>
+                    {roleOptions.map(o => (
+                      <option key={o.value} value={o.value}>{o.label}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {formState === 'error' && (
+                  <div className="form-error" role="alert">{errorMsg}</div>
+                )}
+
+                <button
+                  type="submit"
+                  className="btn btn-primary waitlist-submit"
+                  disabled={formState === 'submitting' || !email.trim()}
+                  id="waitlist-submit-btn"
+                >
+                  {formState === 'submitting' ? 'Submitting…' : 'Join the Waitlist'}
+                </button>
+
+                <p className="form-note">
+                  No spam. No marketing lists. We will only contact you with community updates.
+                </p>
+              </form>
+            )}
           </div>
 
           {/* ---- Sidebar ---- */}
@@ -62,7 +159,11 @@ export default function WaitlistPage() {
               <p style={{ marginTop: '10px' }}>
                 FDE Singapore is a category and community initiative. It is not a consulting pitch.
                 Commercial work is handled separately by{' '}
-                <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.harvestpointconsulting.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Harvest Point Consulting
                 </a>.
               </p>
