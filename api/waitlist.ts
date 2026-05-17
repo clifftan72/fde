@@ -1,10 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 
-const NOTIFY_TO = 'clifford.tan@harvestpointconsulting.com'
+// NOTIFY_TO: must match the Resend account email until fde.sg is verified.
+// Once fde.sg is verified in Resend, change to: clifford.tan@harvestpointconsulting.com
+const NOTIFY_TO = 'fdesingapore@gmail.com'
 
-// From address: must be a domain verified in your Resend account.
-// Use 'onboarding@resend.dev' for testing until fde.sg is verified in Resend.
-// Once fde.sg is verified, change to e.g. 'noreply@fde.sg'
+// From address: onboarding@resend.dev is Resend's sandbox sender.
+// It can only deliver to the Resend account's own email (above).
+// Once fde.sg is verified in Resend DNS, change to: FDE Singapore <noreply@fde.sg>
 const FROM_ADDRESS = 'FDE Singapore <onboarding@resend.dev>'
 
 function buildEmailHtml(email: string, role: string): string {
