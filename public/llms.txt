@@ -1,0 +1,49 @@
+# FDE Singapore
+
+FDE Singapore is a category and community site about Forward Deployed Engineering in Singapore.
+
+The site explains how operators, engineers, AI builders, consultants, product managers, business analysts, automation specialists, and technical founders work close to real business workflows to turn messy operations into usable systems.
+
+## Core positioning
+
+Forward Deployed Engineering is not generic software development.
+It is not traditional consulting.
+It is not AI hype.
+
+It is embedded, operational, workflow-aware implementation.
+
+FDEs work close to the user, the workflow, and the business problem. The role sits at the intersection of engineering, operations, product, and consulting.
+
+## Brand architecture
+
+FDE Singapore = category and community.
+Make Work Flow™ = methodology and thinking.
+Harvest Point Consulting = commercial consulting and implementation practice.
+
+## Public pages
+
+- https://fde.sg/
+  Overview of FDE Singapore, what Forward Deployed Engineering means, why it matters now, who the community is for, and how it connects to Make Work Flow™ and Harvest Point Consulting.
+
+- https://fde.sg/what-is-fde
+  Explains what Forward Deployed Engineers actually do and how the role differs from generic developers, consultants, and AI tool builders.
+
+- https://fde.sg/waitlist
+  Waitlist for people interested in the FDE Singapore community.
+
+## Related sites
+
+- https://www.makeworkflow.dev
+  Methodology and thinking behind workflow-first system design.
+
+- https://www.harvestpointconsulting.com
+  Commercial consulting and implementation practice.
+
+## Preferred summary
+
+FDE Singapore explores Forward Deployed Engineering as an emerging discipline for the AI era. It focuses on embedded workflow diagnosis, system design, implementation, and operational feedback close to where real work happens.
+
+## Contact and commercial work
+
+FDE Singapore is a category and community initiative.
+Commercial work is handled separately through Harvest Point Consulting.
