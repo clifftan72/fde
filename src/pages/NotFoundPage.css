@@ -1,0 +1,17 @@
+.notfound {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+.notfound-inner { max-width: 480px; }
+.notfound-code {
+  font-family: var(--font-heading);
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent-dim);
+  margin-bottom: 16px;
+}
+.notfound-inner h1 { margin-bottom: 12px; }
+.notfound-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }

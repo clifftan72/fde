@@ -1,0 +1,77 @@
+.wif-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  overflow: hidden;
+}
+.wif-hero-glow {
+  position: absolute;
+  top: -80px; left: 0;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at top left, rgba(59,130,246,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.wif-hero-inner { position: relative; z-index: 1; max-width: 680px; }
+.wif-hero-sub { font-size: 1.1rem; margin-top: 20px; }
+
+/* ---- Definition ---- */
+.wif-definition { background: var(--color-bg-2); padding: 72px 0; }
+.definition-block {
+  border-left: 3px solid var(--color-accent);
+  padding: 0 0 0 32px;
+  max-width: 760px;
+}
+.definition-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+.definition-text strong { color: var(--color-text-primary); font-weight: 600; }
+
+/* ---- Contrasts ---- */
+.contrast-list { display: flex; flex-direction: column; gap: 0; }
+.contrast-row {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 32px;
+  align-items: start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.contrast-row:first-child { border-top: 1px solid var(--color-border); }
+.contrast-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.contrast-text { font-size: 0.9rem; color: var(--color-text-secondary); }
+.contrast-row--highlight {
+  background: linear-gradient(90deg, rgba(59,130,246,0.08), transparent);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: 0 -24px;
+  border: none;
+}
+.contrast-row--highlight .contrast-label { color: var(--color-accent-light); }
+.contrast-row--highlight .contrast-text { color: var(--color-text-primary); }
+
+/* ---- Principles ---- */
+.wif-principles { background: var(--color-bg-2); }
+.principle-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent-dim);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+/* ---- CTA ---- */
+.wif-cta { padding: 100px 0; }
+.wif-cta-inner { max-width: 560px; display: flex; flex-direction: column; gap: 20px; }
+
+@media (max-width: 640px) {
+  .contrast-row { grid-template-columns: 1fr; gap: 8px; }
+  .contrast-row--highlight { margin: 0; }
+}
