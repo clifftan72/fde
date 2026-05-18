@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { usePageTitle } from '../hooks/usePageTitle'
+import { usePageMeta } from '../hooks/usePageMeta'
 import './HomePage.css'
 
 const whatFdesDo = [
@@ -42,7 +42,11 @@ const ecosystem = [
 ]
 
 export default function HomePage() {
-  usePageTitle('FDE Singapore | The Forward Deployed Engineer for the AI Era')
+  usePageMeta({
+    title: 'FDE Singapore | Forward Deployed Engineers for the AI Era',
+    description: 'FDE Singapore is a community exploring the Forward Deployed Engineer role for the AI era, focused on real workflows, operations, AI deployment, and usable systems.',
+    canonical: 'https://fde.sg/',
+  })
   return (
     <>
       {/* ---- HERO ---- */}

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { usePageTitle } from '../hooks/usePageTitle'
+import { usePageMeta } from '../hooks/usePageMeta'
 import './WhatIsFdePage.css'
 
 const comparisons = [
@@ -17,7 +17,11 @@ const principles = [
 ]
 
 export default function WhatIsFdePage() {
-  usePageTitle('What Is a Forward Deployed Engineer? | FDE Singapore')
+  usePageMeta({
+    title: 'What Is a Forward Deployed Engineer? | FDE Singapore',
+    description: 'A practical explanation of the Forward Deployed Engineer role, how it differs from developers and consultants, and why it matters for AI deployment in real operations.',
+    canonical: 'https://fde.sg/what-is-fde',
+  })
   return (
     <>
       <section className="wif-hero">

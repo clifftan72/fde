@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { usePageTitle } from '../hooks/usePageTitle'
+import { usePageMeta } from '../hooks/usePageMeta'
 import './WaitlistPage.css'
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
@@ -16,7 +16,11 @@ const roleOptions = [
 ]
 
 export default function WaitlistPage() {
-  usePageTitle('Join the FDE Singapore Waitlist | FDE Singapore')
+  usePageMeta({
+    title: 'Join the FDE Singapore Waitlist | FDE Singapore',
+    description: 'Join the FDE Singapore community for operators, engineers, AI builders, consultants, and technologists working close to real business workflows.',
+    canonical: 'https://fde.sg/waitlist',
+  })
 
   const [email, setEmail]       = useState('')
   const [role, setRole]         = useState('')
