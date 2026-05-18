@@ -25,9 +25,12 @@
   text-decoration: none;
   color: var(--color-text-primary);
 }
-.logo-mark { color: var(--color-accent-light); letter-spacing: 0.05em; }
-.logo-dot  { color: var(--color-text-muted); margin: 0 2px; }
-.logo-region { color: var(--color-text-secondary); font-weight: 500; font-size: 0.9rem; }
+.logo-img { 
+  height: 48px; 
+  width: auto; 
+  object-fit: contain; 
+  border-radius: 50%;
+}
 
 .site-nav {
   display: flex;
@@ -104,7 +107,7 @@
   gap: 64px;
   padding: 64px 0 48px;
 }
-.footer-brand .logo { margin-bottom: 16px; }
+.footer-brand .logo-img { height: 64px; margin-bottom: 16px; }
 .footer-tagline { font-size: 0.9rem; max-width: 320px; line-height: 1.6; }
 .footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .footer-col h4 {

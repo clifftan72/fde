@@ -11,9 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="site-header">
         <div className="container header-inner">
           <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
-            <span className="logo-mark">FDE</span>
-            <span className="logo-dot">·</span>
-            <span className="logo-region">Singapore</span>
+            <img src="/logo.png" alt="FDE Singapore Logo" className="logo-img" />
           </Link>
 
           <nav className={`site-nav ${menuOpen ? 'open' : ''}`}>
@@ -45,9 +43,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container footer-inner">
           <div className="footer-brand">
             <div className="logo">
-              <span className="logo-mark">FDE</span>
-              <span className="logo-dot">·</span>
-              <span className="logo-region">Singapore</span>
+              <img src="/logo.png" alt="FDE Singapore Logo" className="logo-img" />
             </div>
             <p className="footer-tagline">
               Category and community site exploring the Forward Deployed Engineer role in Singapore.
