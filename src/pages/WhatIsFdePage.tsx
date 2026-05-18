@@ -6,7 +6,7 @@ const comparisons = [
   { label: 'Generic software development', contrast: 'Builds to spec without owning operational context.' },
   { label: 'Traditional consulting', contrast: 'Recommends without delivering working systems.' },
   { label: 'AI automation', contrast: 'Deploys tools without embedding them in real workflows.' },
-  { label: 'Forward Deployed Engineering', contrast: 'Builds inside real operations. Owns the workflow gap. Delivers usable systems.', highlight: true },
+  { label: 'Forward Deployed Engineer', contrast: 'Builds inside real operations. Owns the workflow gap. Delivers usable systems.', highlight: true },
 ]
 
 const principles = [
@@ -24,7 +24,7 @@ export default function WhatIsFdePage() {
         <div className="wif-hero-glow" aria-hidden="true" />
         <div className="container wif-hero-inner">
           <div className="section-label">What is FDE?</div>
-          <h1>Forward Deployed Engineering, explained.</h1>
+          <h1>The Forward Deployed Engineer, explained.</h1>
           <p className="wif-hero-sub">
             The role that sits between engineering, operations, product, and consulting —
             and is none of those things alone.

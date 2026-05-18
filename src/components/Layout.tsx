@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="logo-region">Singapore</span>
             </div>
             <p className="footer-tagline">
-              Category and community site for Forward Deployed Engineering in Singapore.
+              Category and community site exploring the Forward Deployed Engineer role in Singapore.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="container">
             <p>© {new Date().getFullYear()} FDE Singapore. A community initiative.</p>
             <p className="footer-legal">
-              FDE Singapore explores the Forward Deployed Engineering role and community. 
+              FDE Singapore explores the Forward Deployed Engineer role and community. 
               Commercial consulting services are provided separately by{' '}
               <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>.
             </p>

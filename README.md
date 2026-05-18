@@ -1,6 +1,6 @@
 # FDE Singapore
 
-Category and community site for Forward Deployed Engineering in Singapore.
+Category and community site exploring the Forward Deployed Engineer role in Singapore.
 
 ## Stack
 
@@ -60,7 +60,7 @@ The waitlist form reads `VITE_WAITLIST_ENDPOINT` from environment at build time.
 ## Information Guardrails
 
 This site exposes only:
-- What FDE means as a discipline
+- What the FDE role means as a discipline
 - Why FDE matters now
 - What FDEs do at a high level
 - Who the community is for

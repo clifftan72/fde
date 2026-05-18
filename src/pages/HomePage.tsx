@@ -21,7 +21,7 @@ const ecosystem = [
   {
     name: 'FDE Singapore',
     role: 'Category & Community',
-    desc: 'Explores the Forward Deployed Engineering role. Market education, community, and the waitlist you\'re on now.',
+    desc: 'Explores the Forward Deployed Engineer role. Market education, community, and the waitlist you\'re on now.',
     current: true,
     href: '/',
   },
@@ -42,16 +42,16 @@ const ecosystem = [
 ]
 
 export default function HomePage() {
-  usePageTitle('FDE Singapore | Forward Deployed Engineering for the AI Era')
+  usePageTitle('FDE Singapore | The Forward Deployed Engineer for the AI Era')
   return (
     <>
       {/* ---- HERO ---- */}
       <section className="hero">
         <div className="hero-glow" aria-hidden="true" />
         <div className="container hero-inner">
-          <div className="section-label">Forward Deployed Engineering · Singapore</div>
+          <div className="section-label">THE FDE ROLE · SINGAPORE</div>
           <h1 className="hero-title">
-            Forward Deployed Engineering<br />
+            The Forward Deployed Engineer<br />
             <span className="hero-title-accent">for the AI era.</span>
           </h1>
           <p className="hero-subtitle">
@@ -128,7 +128,7 @@ export default function HomePage() {
                 Someone has to do the work of closing it.
               </p>
               <p style={{ marginTop: '16px' }}>
-                That is what Forward Deployed Engineering is for.
+                That is what the Forward Deployed Engineer role is for.
               </p>
             </div>
             <div className="why-now-points">
@@ -157,7 +157,7 @@ export default function HomePage() {
           <div className="section-header">
             <div className="section-label">Section 03</div>
             <h2>What FDEs actually do</h2>
-            <p>Six core activities that define Forward Deployed Engineering work.</p>
+            <p>Six core activities that define the Forward Deployed Engineer's work.</p>
           </div>
           <div className="grid-auto">
             {whatFdesDo.map(item => (

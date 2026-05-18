@@ -148,7 +148,7 @@ export default function WaitlistPage() {
               <h3>What to expect</h3>
               <ul className="sidebar-list">
                 <li>Community updates as FDE Singapore grows</li>
-                <li>Perspectives on Forward Deployed Engineering in practice</li>
+                <li>Perspectives on the Forward Deployed Engineer role in practice</li>
                 <li>Invitations to events and conversations</li>
                 <li>No noise — only signal</li>
               </ul>

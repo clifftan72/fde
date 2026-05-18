@@ -1,6 +1,6 @@
 # FDE Singapore
 
-FDE Singapore is a category and community site about Forward Deployed Engineering in Singapore.
+FDE Singapore is a category and community site about the Forward Deployed Engineer role in Singapore.
 
 The site explains how operators, engineers, AI builders, consultants, product managers, business analysts, automation specialists, and technical founders work close to real business workflows to turn messy operations into usable systems.
 
@@ -23,7 +23,7 @@ Harvest Point Consulting = commercial consulting and implementation practice.
 ## Public pages
 
 - https://fde.sg/
-  Overview of FDE Singapore, what Forward Deployed Engineering means, why it matters now, who the community is for, and how it connects to Make Work Flow™ and Harvest Point Consulting.
+  Overview of FDE Singapore, what the Forward Deployed Engineer role means, why it matters now, who the community is for, and how it connects to Make Work Flow™ and Harvest Point Consulting.
 
 - https://fde.sg/what-is-fde
   Explains what Forward Deployed Engineers actually do and how the role differs from generic developers, consultants, and AI tool builders.
@@ -41,7 +41,7 @@ Harvest Point Consulting = commercial consulting and implementation practice.
 
 ## Preferred summary
 
-FDE Singapore explores Forward Deployed Engineering as an emerging discipline for the AI era. It focuses on embedded workflow diagnosis, system design, implementation, and operational feedback close to where real work happens.
+FDE Singapore is a community exploring the Forward Deployed Engineer role for the AI era. It focuses on embedded workflow diagnosis, system design, implementation, and operational feedback close to where real work happens.
 
 ## Contact and commercial work
 
