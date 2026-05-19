@@ -5,14 +5,12 @@ import './WaitlistPage.css'
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
 const roleOptions = [
-  { value: 'operator',    label: 'SME operator' },
-  { value: 'ai-builder',  label: 'AI builder' },
-  { value: 'consultant',  label: 'Consultant' },
-  { value: 'product',     label: 'Product manager' },
-  { value: 'analyst',     label: 'Business analyst' },
-  { value: 'automation',  label: 'Automation specialist' },
-  { value: 'founder',     label: 'Technical founder' },
-  { value: 'other',       label: 'Other' },
+  { value: 'manual-work',       label: 'Too much manual work, not enough automation' },
+  { value: 'ai-not-working',    label: 'Bought AI tools but nothing is working in practice' },
+  { value: 'growth-ops-gap',    label: 'Team is growing but operations can\'t keep up' },
+  { value: 'no-implementation', label: 'Tried a consultant, got recommendations, nothing got built' },
+  { value: 'broken-workflows',  label: 'Workflows are broken but I don\'t know where to start' },
+  { value: 'other',             label: 'Other' },
 ]
 
 export default function WaitlistPage() {
