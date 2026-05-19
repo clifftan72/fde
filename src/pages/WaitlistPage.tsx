@@ -65,8 +65,8 @@ export default function WaitlistPage() {
       <section className="waitlist-hero">
         <div className="waitlist-glow" aria-hidden="true" />
         <div className="container waitlist-hero-inner">
-          <div className="section-label">Join the Community</div>
-          <h1>Join the FDE Singapore Waitlist.</h1>
+          <div className="section-label">BOOK YOUR FREE AUDIT</div>
+          <h1>Find out what's leaking in your operations.</h1>
           <p className="waitlist-hero-sub">
             Book a free 30-minute process audit. We'll look at where your operations are leaking — time, money, and decisions — and whether Leak Finder is the right fit.
           </p>
