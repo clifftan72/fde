@@ -17,8 +17,8 @@ const roleOptions = [
 
 export default function WaitlistPage() {
   usePageMeta({
-    title: 'Join the FDE Singapore Waitlist | FDE Singapore',
-    description: 'Join the FDE Singapore community for operators, engineers, AI builders, consultants, and technologists working close to real business workflows.',
+    title: 'Book a Free Process Audit | FDE Singapore',
+    description: 'Book a free 30-minute process audit with HPC. We embed inside Singapore SMEs to find what\'s leaking — time, money, and decisions — and fix it.',
     canonical: 'https://fde.sg/waitlist',
   })
 
@@ -81,10 +81,10 @@ export default function WaitlistPage() {
             {formState === 'success' ? (
               <div className="waitlist-success" role="alert">
                 <div className="success-icon">✓</div>
-                <h2>You are on the list.</h2>
+                <h2>Request received.</h2>
                 <p>
-                  We will be in touch as the FDE Singapore community takes shape.
-                  No spam — just relevant updates when there is something worth sharing.
+                  Expect an email within 24 hours to schedule your free process audit.
+                  If it's not the right fit, we'll tell you straight.
                 </p>
               </div>
             ) : (

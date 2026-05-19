@@ -91,13 +91,13 @@ export default function WhatIsFdePage() {
       {/* ---- CTA ---- */}
       <section className="wif-cta">
         <div className="container wif-cta-inner">
-          <h2>Ready to follow the discipline?</h2>
+          <h2>See if this is the right fit for your operations.</h2>
           <p>
-            FDE Singapore is building a community for people who work at this intersection.
-            Join the waitlist to stay connected as the community grows.
+            HPC embeds inside Singapore SMEs to find what's leaking and fix it.
+            Book a free 30-minute process audit — no pitch, no obligation.
           </p>
           <Link to="/waitlist" className="btn btn-primary" id="wif-cta-waitlist">
-            Join the Waitlist
+            Book a Free Process Audit
           </Link>
         </div>
       </section>

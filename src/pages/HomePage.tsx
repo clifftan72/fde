@@ -21,21 +21,21 @@ const ecosystem = [
     role: '01',
     desc: '4-week diagnostic — We embed in your operations for four weeks. Map where time, money, and decisions are leaking. You get a ranked ops debt report — specific, prioritised, and actionable. Not a strategy deck.',
     current: false,
-    href: '#',
+    href: '/waitlist',
   },
   {
     name: 'Workflow Surgery',
     role: '02',
     desc: 'Project engagement — We fix the highest-impact leak. Build the system, configure the tools, test with your actual team — and hand it over running. Not a prototype. A working system.',
     current: false,
-    href: '#',
+    href: '/waitlist',
   },
   {
     name: 'Ops Intelligence',
     role: '03',
     desc: 'Monthly retainer — Ongoing embedded presence. Continuous deployment, iteration, and operational intelligence. The right engagement for founders who want operations that compound — not just a one-time fix.',
     current: false,
-    href: '#',
+    href: '/waitlist',
   },
 ]
 
@@ -63,7 +63,7 @@ export default function HomePage() {
             <Link to="/waitlist" className="btn btn-primary" id="hero-cta-waitlist">
               Book a Free Process Audit
             </Link>
-            <Link to="/what-is-fde" className="btn btn-ghost" id="hero-cta-learn">
+            <Link to="/waitlist" className="btn btn-ghost" id="hero-cta-learn">
               See how it works →
             </Link>
           </div>
@@ -202,8 +202,8 @@ export default function HomePage() {
               <a
                 key={item.name}
                 href={item.href}
-                target={item.current ? undefined : '_blank'}
-                rel={item.current ? undefined : 'noopener noreferrer'}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className={`card ecosystem-card ${item.current ? 'ecosystem-card--current' : ''}`}
               >
                 {item.current && <span className="ecosystem-badge">You are here</span>}
