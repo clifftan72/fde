@@ -2,26 +2,61 @@ import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import './Layout.css'
 
+function HashLink({
+  hash,
+  className,
+  children,
+  onClick,
+}: {
+  hash: string
+  className?: string
+  children: React.ReactNode
+  onClick?: () => void
+}) {
+  const { pathname } = useLocation()
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    onClick?.()
+    if (pathname === '/') {
+      e.preventDefault()
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' })
+    }
+    // On other pages: let Link navigate to /#hash, ScrollToHash handles the scroll
+  }
+
+  return (
+    <Link to={`/#${hash}`} className={className} onClick={handleClick}>
+      {children}
+    </Link>
+  )
+}
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
+
+  const closeMenu = () => setMenuOpen(false)
 
   return (
     <>
       <header className="site-header">
         <div className="container header-inner">
-          <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
+          <Link to="/" className="logo" onClick={closeMenu}>
             <img src="/logo.png" alt="FDE Singapore Logo" className="logo-img" />
           </Link>
 
           <nav className={`site-nav ${menuOpen ? 'open' : ''}`}>
-            <Link to="/what-is-fde" className={`nav-link ${pathname === '/what-is-fde' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>
+            <Link
+              to="/what-is-fde"
+              className={`nav-link ${pathname === '/what-is-fde' ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
               What is FDE?
             </Link>
-            <Link to="/waitlist" className={`nav-link ${pathname === '/waitlist' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>
+            <HashLink hash="how-it-works" className="nav-link" onClick={closeMenu}>
               How It Works
-            </Link>
-            <Link to="/waitlist" className="btn btn-primary btn-sm" onClick={() => setMenuOpen(false)}>
+            </HashLink>
+            <Link to="/waitlist" className="btn btn-primary btn-sm" onClick={closeMenu}>
               Book a Process Audit
             </Link>
           </nav>
@@ -53,14 +88,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="footer-cols">
             <div className="footer-col">
               <h4>Services</h4>
-              <a href="#">Leak Finder</a>
-              <a href="#">Workflow Surgery</a>
-              <a href="#">Ops Intelligence</a>
+              <HashLink hash="how-it-works">Leak Finder</HashLink>
+              <HashLink hash="how-it-works">Workflow Surgery</HashLink>
+              <HashLink hash="how-it-works">Ops Intelligence</HashLink>
             </div>
             <div className="footer-col">
               <h4>About</h4>
-              <Link to="/what-is-fde">What is FDE?</Link>
-              <Link to="/waitlist">How It Works</Link>
+              <HashLink hash="what-is-fde">What is FDE?</HashLink>
+              <HashLink hash="how-it-works">How It Works</HashLink>
               <Link to="/waitlist">Book a Process Audit</Link>
             </div>
           </div>

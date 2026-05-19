@@ -74,7 +74,7 @@ export default function HomePage() {
       </section>
 
       {/* ---- SECTION 1: What is an FDE ---- */}
-      <section className="section-fde-explainer">
+      <section id="what-is-fde" className="section-fde-explainer">
         <div className="container">
           <div className="section-header">
             <div className="section-label">Section 01</div>
@@ -188,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* ---- SECTION 5: Ecosystem ---- */}
-      <section className="section-ecosystem">
+      <section id="how-it-works" className="section-ecosystem">
         <div className="container">
           <div className="section-header">
             <div className="section-label">Section 05</div>
