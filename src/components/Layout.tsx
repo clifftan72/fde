@@ -19,10 +19,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               What is FDE?
             </Link>
             <Link to="/waitlist" className={`nav-link ${pathname === '/waitlist' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>
-              Waitlist
+              How It Works
             </Link>
             <Link to="/waitlist" className="btn btn-primary btn-sm" onClick={() => setMenuOpen(false)}>
-              Join Waitlist
+              Book a Process Audit
             </Link>
           </nav>
 
@@ -46,32 +46,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img src="/logo.png" alt="FDE Singapore Logo" className="logo-img" />
             </div>
             <p className="footer-tagline">
-              Category and community site exploring the Forward Deployed Engineer role in Singapore.
+              Singapore's only embedded AI deployment partner built for SMEs.
             </p>
           </div>
 
           <div className="footer-cols">
             <div className="footer-col">
-              <h4>Explore</h4>
-              <Link to="/what-is-fde">What is FDE?</Link>
-              <Link to="/waitlist">Join Waitlist</Link>
+              <h4>Services</h4>
+              <a href="#">Leak Finder</a>
+              <a href="#">Workflow Surgery</a>
+              <a href="#">Ops Intelligence</a>
             </div>
             <div className="footer-col">
-              <h4>Ecosystem</h4>
-              <a href="https://www.makeworkflow.dev" target="_blank" rel="noopener noreferrer">Make Work Flow™</a>
-              <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>
+              <h4>About</h4>
+              <Link to="/what-is-fde">What is FDE?</Link>
+              <Link to="/waitlist">How It Works</Link>
+              <Link to="/waitlist">Book a Process Audit</Link>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
           <div className="container">
-            <p>© {new Date().getFullYear()} FDE Singapore. A community initiative.</p>
-            <p className="footer-legal">
-              FDE Singapore explores the Forward Deployed Engineer role and community. 
-              Commercial consulting services are provided separately by{' '}
-              <a href="https://www.harvestpointconsulting.com" target="_blank" rel="noopener noreferrer">Harvest Point Consulting</a>.
-            </p>
+            <p>© {new Date().getFullYear()} Harvest Point Consulting. Operated by Clifford Tan.</p>
           </div>
         </div>
       </footer>

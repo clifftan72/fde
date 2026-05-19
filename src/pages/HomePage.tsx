@@ -12,39 +12,37 @@ const whatFdesDo = [
 ]
 
 const whoItsFor = [
-  'SME operators', 'AI builders', 'Consultants', 'Product managers',
-  'Business analysts', 'Automation specialists', 'Technical founders',
-  'People working between business and technology',
+  'Founder-operators', 'Agency owners', 'Ops-stretched founders', 'SME owners scaling past 10 staff',
 ]
 
 const ecosystem = [
   {
-    name: 'FDE Singapore',
-    role: 'Category & Community',
-    desc: 'Explores the Forward Deployed Engineer role. Market education, community, and the waitlist you\'re on now.',
-    current: true,
-    href: '/',
+    name: 'Leak Finder',
+    role: '01',
+    desc: '4-week diagnostic — We embed in your operations for four weeks. Map where time, money, and decisions are leaking. You get a ranked ops debt report — specific, prioritised, and actionable. Not a strategy deck.',
+    current: false,
+    href: '#',
   },
   {
-    name: 'Make Work Flow™',
-    role: 'Methodology & Thinking',
-    desc: 'The operational methodology behind workflow-first system design. Principles, patterns, and field notes.',
+    name: 'Workflow Surgery',
+    role: '02',
+    desc: 'Project engagement — We fix the highest-impact leak. Build the system, configure the tools, test with your actual team — and hand it over running. Not a prototype. A working system.',
     current: false,
-    href: 'https://www.makeworkflow.dev',
+    href: '#',
   },
   {
-    name: 'Harvest Point Consulting',
-    role: 'Commercial Practice',
-    desc: 'Where FDE methodology meets client engagements. Consulting and implementation for Singapore businesses.',
+    name: 'Ops Intelligence',
+    role: '03',
+    desc: 'Monthly retainer — Ongoing embedded presence. Continuous deployment, iteration, and operational intelligence. The right engagement for founders who want operations that compound — not just a one-time fix.',
     current: false,
-    href: 'https://www.harvestpointconsulting.com',
+    href: '#',
   },
 ]
 
 export default function HomePage() {
   usePageMeta({
-    title: 'FDE Singapore | Forward Deployed Engineers for the AI Era',
-    description: 'FDE Singapore is a community exploring the Forward Deployed Engineer role for the AI era, focused on real workflows, operations, AI deployment, and usable systems.',
+    title: 'FDE Singapore | Embedded AI Deployment for Singapore SMEs',
+    description: 'Singapore\'s only embedded AI deployment partner built for SMEs. HPC embeds inside your operations to find what\'s leaking and deploy working systems — not recommendations.',
     canonical: 'https://fde.sg/',
   })
   return (
@@ -55,24 +53,22 @@ export default function HomePage() {
         <div className="container hero-inner">
           <div className="section-label">THE FDE ROLE · SINGAPORE</div>
           <h1 className="hero-title">
-            The Forward Deployed Engineer<br />
-            <span className="hero-title-accent">for the AI era.</span>
+            Your operations are broken.<br />
+            <span className="hero-title-accent">AI won't fix that by itself.</span>
           </h1>
           <p className="hero-subtitle">
-            FDE Singapore explores how operators, engineers, and AI builders work close to real business
-            workflows to turn messy operations into usable systems.
+            Most Singapore SMEs have bought the tools. None of it is working inside their actual operations. The gap isn't AI capability — it's deployment, context, and someone who stays until it works. That's what a Forward Deployed Engineer does. And it's what HPC does for Singapore SMEs.
           </p>
           <div className="hero-actions">
             <Link to="/waitlist" className="btn btn-primary" id="hero-cta-waitlist">
-              Join the FDE Singapore Waitlist
+              Book a Free Process Audit
             </Link>
             <Link to="/what-is-fde" className="btn btn-ghost" id="hero-cta-learn">
-              Learn what FDEs actually do
+              See how it works →
             </Link>
           </div>
           <div className="hero-context">
-            Not generic software development. Not traditional consulting. Not AI hype.
-            Embedded, operational, workflow-aware implementation.
+            Not a slide deck. Not a recommendation. A working system — built inside your operations, by someone who stays until it runs.
           </div>
         </div>
       </section>
@@ -84,14 +80,12 @@ export default function HomePage() {
             <div className="section-label">Section 01</div>
             <h2>What is a Forward Deployed Engineer?</h2>
             <p>
-              An FDE works close to the user, the workflow, and the actual business problem.
-              The role sits at the intersection of engineering, operations, product, and consulting —
-              but it is none of those things alone.
+              An FDE doesn't advise from the outside. They embed inside your operations — learning how work actually moves, where it breaks, and what a real fix looks like. Then they build it. The role sits at the intersection of engineering, operations, and business context. But what makes it different is simpler than that: an FDE stays until the system works.
             </p>
           </div>
           <div className="explainer-grid">
             <div className="explainer-block">
-              <h3>They go where the work happens.</h3>
+              <h3>They embed in your operations.</h3>
               <p>
                 FDEs are not building software in isolation from a spec. They are embedded in operations,
                 learning the real process, and building systems that fit the actual workflow — not an
@@ -161,7 +155,7 @@ export default function HomePage() {
           <div className="section-header">
             <div className="section-label">Section 03</div>
             <h2>What FDEs actually do</h2>
-            <p>Six core activities that define the Forward Deployed Engineer's work.</p>
+            <p>Six things that happen when an FDE is inside your operations — not six things a consultant puts in a proposal.</p>
           </div>
           <div className="grid-auto">
             {whatFdesDo.map(item => (
@@ -180,10 +174,9 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <div className="section-label">Section 04</div>
-            <h2>Who this community is for</h2>
+            <h2>Who this is for</h2>
             <p>
-              FDE Singapore is a category and community site. It is for anyone working at the
-              boundary between business operations and technology.
+              If you run an SME in Singapore and your operations aren't keeping up with your growth — this is for you. Specifically: you're the founder who is also the de facto ops person. You've bought AI tools. Some have been configured. None are running reliably inside your actual workflows. You've possibly hired a consultant and got recommendations you couldn't implement. HPC exists for that gap.
             </p>
           </div>
           <div className="who-tags">
@@ -199,10 +192,9 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <div className="section-label">Section 05</div>
-            <h2>How this connects</h2>
+            <h2>How this works</h2>
             <p>
-              FDE Singapore is part of a deliberate brand architecture — three distinct roles,
-              not one blurred brand.
+              HPC embeds inside your operations through three structured engagements. Each one builds on the last.
             </p>
           </div>
           <div className="grid-3">
@@ -228,15 +220,13 @@ export default function HomePage() {
       <section className="section-waitlist-cta">
         <div className="container">
           <div className="waitlist-cta-inner">
-            <div className="section-label">Join the Community</div>
-            <h2>Be part of what comes next.</h2>
+            <div className="section-label">BOOK YOUR AUDIT</div>
+            <h2>Find out what's leaking in your operations.</h2>
             <p>
-              FDE Singapore is building a community of practitioners, operators, and builders
-              who work at the frontier of deployed AI and operational systems.
-              Join the waitlist to follow what we are learning.
+              The Leak Finder is a 4-week embedded diagnostic. At the end of it, you'll know exactly where your operations are bleeding — time, money, and decisions. Most clients find three to five high-impact leaks in the first engagement. Book a free 30-minute process audit to see if it's the right fit.
             </p>
             <Link to="/waitlist" className="btn btn-primary" id="bottom-cta-waitlist">
-              Join the FDE Singapore Waitlist
+              Book a Free Process Audit
             </Link>
           </div>
         </div>

@@ -7,8 +7,8 @@ interface PageMeta {
 }
 
 const DEFAULTS = {
-  title: 'FDE Singapore | Forward Deployed Engineers for the AI Era',
-  description: 'FDE Singapore is a community exploring the Forward Deployed Engineer role for the AI era, focused on real workflows, operations, AI deployment, and usable systems.',
+  title: 'FDE Singapore | Embedded AI Deployment for Singapore SMEs',
+  description: 'Singapore\'s only embedded AI deployment partner built for SMEs. HPC embeds inside your operations to find what\'s leaking and deploy working systems — not recommendations.',
   canonical: 'https://fde.sg/',
 }
 
