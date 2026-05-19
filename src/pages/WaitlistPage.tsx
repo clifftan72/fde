@@ -68,8 +68,7 @@ export default function WaitlistPage() {
           <div className="section-label">Join the Community</div>
           <h1>Join the FDE Singapore Waitlist.</h1>
           <p className="waitlist-hero-sub">
-            We are building a community for operators, engineers, AI builders, and practitioners
-            working at the intersection of business operations and technology.
+            Book a free 30-minute process audit. We'll look at where your operations are leaking — time, money, and decisions — and whether Leak Finder is the right fit.
           </p>
         </div>
       </section>
@@ -109,7 +108,7 @@ export default function WaitlistPage() {
 
                 <div className="form-group">
                   <label htmlFor="waitlist-role" className="form-label">
-                    Your role or context{' '}
+                    Your biggest operational headache right now{' '}
                     <span className="form-optional">(optional)</span>
                   </label>
                   <select
@@ -136,11 +135,11 @@ export default function WaitlistPage() {
                   disabled={formState === 'submitting' || !email.trim()}
                   id="waitlist-submit-btn"
                 >
-                  {formState === 'submitting' ? 'Submitting…' : 'Join the Waitlist'}
+                  {formState === 'submitting' ? 'Submitting…' : 'Book My Free Process Audit'}
                 </button>
 
                 <p className="form-note">
-                  No spam. No marketing lists. We will only contact you with community updates.
+                  No pitch. No obligation. A straight conversation about whether this is the right fit for your business.
                 </p>
               </form>
             )}
@@ -149,28 +148,13 @@ export default function WaitlistPage() {
           {/* ---- Sidebar ---- */}
           <div className="waitlist-sidebar">
             <div className="sidebar-block">
-              <h3>What to expect</h3>
+              <h3>What happens next</h3>
               <ul className="sidebar-list">
-                <li>Community updates as FDE Singapore grows</li>
-                <li>Perspectives on the Forward Deployed Engineer role in practice</li>
-                <li>Invitations to events and conversations</li>
-                <li>No noise — only signal</li>
+                <li>30-minute call to map your biggest operational leak</li>
+                <li>Honest assessment of whether Leak Finder fits your situation</li>
+                <li>If it's a fit — a scoped proposal within 48 hours</li>
+                <li>No hard sell. If it's not the right time, we'll tell you.</li>
               </ul>
-            </div>
-
-            <div className="sidebar-block">
-              <h3>This is not a product.</h3>
-              <p style={{ marginTop: '10px' }}>
-                FDE Singapore is a category and community initiative. It is not a consulting pitch.
-                Commercial work is handled separately by{' '}
-                <a
-                  href="https://www.harvestpointconsulting.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Harvest Point Consulting
-                </a>.
-              </p>
             </div>
           </div>
 
